@@ -1,0 +1,26 @@
+@mixin generate-menu-icons($color) {
+  @each $menu in $menus {
+    --icon-#{$menu}: url("../images/#{$color}/#{$menu}.svg");
+  }
+}
+:root {
+  --gray-0: #fff;
+  --gray-5: #fafafa;
+  --gray-10: #e9f1fa;
+  --gray-20: #e5e9ee;
+  --gray-30: #d4dde0;
+  --gray-40: #cacbcd;
+  --gray-50: #9ea1a6;
+  --gray-100: #2c2e31;
+  --red-color: #e64f56;
+  --primary-color: #2691e6;
+  --secondary-color: #07325d;
+  --contents-space: 15rem;
+  --bi-font-family: "bootstrap-icons";
+  --websize: 140rem;
+}
+@media (max-width: 1400px) {
+  :root {
+    --contents-space: 10rem;
+  }
+}

@@ -1,0 +1,30 @@
+@mixin svg-icon($path, $width, $height) {
+  display: inline-block;
+  width: $width;
+  height: $height;
+  background: url(#{$path}) no-repeat center;
+  background-size: contain;
+}
+
+@mixin boots-icon($icon-unicode, $size: 1.5rem, $color: #2c2e31) {
+  font-family: var(--bi-font-family);
+  font-style: normal;
+  font-weight: 600;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  text-align: center;
+  line-height: 1;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  content: $icon-unicode;
+  font-size: $size;
+  color: $color;
+  width: $size;
+  height: $size;
+  text-align: center;
+  cursor: pointer;
+  transition: color 0.3s;
+}
