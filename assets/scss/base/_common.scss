@@ -62,12 +62,18 @@ a {
   cursor: pointer;
 }
 
+@media (max-width: 768px) {
+  html {
+    letter-spacing: -0.05rem;
+  }
+}
+
 /* ---------------------- layout ---------------------- */
 #wrap {
   min-width: var(--websize);
 }
 
-@media (max-width: 1279px) {
+@media (max-width: 1280px) {
   #wrap {
     min-width: 100%;
   }
@@ -261,6 +267,21 @@ a {
     .footer-wrap {
       width: 100%;
       padding-inline: 3rem;
+    }
+  }
+}
+@media (max-width: 768px) {
+  #footer {
+    .footer-text {
+      font-size: 1.6rem;
+      span {
+        display: block;
+        letter-spacing: 0;
+        &::before {
+          content: none;
+          padding-inline: 0;
+        }
+      }
     }
   }
 }
@@ -579,7 +600,7 @@ button {
   transform: translateY(40px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
-@media (max-width: 1279px) {
+@media (max-width: 1280px) {
   .ani {
     opacity: 1 !important;
     transform: none !important;

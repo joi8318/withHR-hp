@@ -636,6 +636,7 @@
     letter-spacing: 0;
     font-weight: 600;
     padding-left: 1.5rem;
+    width: 11rem;
   }
   .company {
     &::before {
@@ -703,7 +704,6 @@
       background-color: var(--gray-5);
       height: 3.5rem;
       width: 40rem;
-      min-width: 28rem;
       padding-inline: 1rem;
       margin-left: 1rem;
     }
@@ -732,6 +732,9 @@
   }
 }
 @media (max-width: 768px) {
+  .pop-wrap {
+    max-height: 85vh;
+  }
   .pop-header {
     margin-top: 2rem;
     padding-inline: 2rem;
@@ -768,6 +771,7 @@
       flex-wrap: wrap;
       label {
         margin-left: 1rem;
+        letter-spacing: 0;
       }
     }
   }

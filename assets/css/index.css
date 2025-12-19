@@ -501,12 +501,17 @@ a {
   cursor: pointer;
 }
 
+@media (max-width: 768px) {
+  html {
+    letter-spacing: -0.05rem;
+  }
+}
 /* ---------------------- layout ---------------------- */
 #wrap {
   min-width: var(--websize);
 }
 
-@media (max-width: 1279px) {
+@media (max-width: 1280px) {
   #wrap {
     min-width: 100%;
   }
@@ -712,6 +717,19 @@ a {
   #footer .footer-wrap {
     width: 100%;
     padding-inline: 3rem;
+  }
+}
+@media (max-width: 768px) {
+  #footer .footer-text {
+    font-size: 1.6rem;
+  }
+  #footer .footer-text span {
+    display: block;
+    letter-spacing: 0;
+  }
+  #footer .footer-text span::before {
+    content: none;
+    padding-inline: 0;
   }
 }
 /* ---------------------- common ---------------------- */
@@ -1051,7 +1069,7 @@ button {
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-@media (max-width: 1279px) {
+@media (max-width: 1280px) {
   .ani {
     opacity: 1 !important;
     transform: none !important;
@@ -1736,6 +1754,7 @@ button {
   letter-spacing: 0;
   font-weight: 600;
   padding-left: 1.5rem;
+  width: 11rem;
 }
 .base-form .company::before {
   font-family: var(--bi-font-family);
@@ -1901,7 +1920,6 @@ button {
   background-color: var(--gray-5);
   height: 3.5rem;
   width: 40rem;
-  min-width: 28rem;
   padding-inline: 1rem;
   margin-left: 1rem;
 }
@@ -1928,6 +1946,9 @@ button {
   }
 }
 @media (max-width: 768px) {
+  .pop-wrap {
+    max-height: 85vh;
+  }
   .pop-header {
     margin-top: 2rem;
     padding-inline: 2rem;
@@ -1966,5 +1987,6 @@ button {
   }
   .detail-form .con label {
     margin-left: 1rem;
+    letter-spacing: 0;
   }
 }
